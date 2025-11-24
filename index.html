@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>How many haircuts until Christmas?</title>
+    <meta name="description" content="Count the haircuts until Christmas. Better make them count.">
+    
+    <meta property="og:image" content="https://www.howmanyhaircutsuntilchristmas.com/social-share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta property="og:title" content="How many haircuts until Christmas?">
+    <meta property="og:description" content="Count the haircuts until Christmas. Better make them count.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M50 15 L90 85 L10 85 Z%22 fill=%22%231a472a%22 stroke=%22%23e74c3c%22 stroke-width=%225%22/></svg>">
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            /* Festive Green Background */
+            background-color: #1a472a; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Snow Animation */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        .snowflake:nth-child(1) { left: 10%; width: 10px; height: 10px; animation-duration: 10s; animation-delay: 0s; }
+        .snowflake:nth-child(2) { left: 20%; width: 15px; height: 15px; animation-duration: 15s; animation-delay: 2s; }
+        .snowflake:nth-child(3) { left: 30%; width: 7px; height: 7px; animation-duration: 12s; animation-delay: 4s; }
+        .snowflake:nth-child(4) { left: 40%; width: 12px; height: 12px; animation-duration: 8s; animation-delay: 1s; }
+        .snowflake:nth-child(5) { left: 50%; width: 8px; height: 8px; animation-duration: 14s; animation-delay: 3s; }
+        .snowflake:nth-child(6) { left: 60%; width: 14px; height: 14px; animation-duration: 11s; animation-delay: 5s; }
+        .snowflake:nth-child(7) { left: 70%; width: 9px; height: 9px; animation-duration: 16s; animation-delay: 2.5s; }
+        .snowflake:nth-child(8) { left: 80%; width: 11px; height: 11px; animation-duration: 9s; animation-delay: 1.5s; }
+        .snowflake:nth-child(9) { left: 90%; width: 6px; height: 6px; animation-duration: 13s; animation-delay: 0.5s; }
+        .snowflake:nth-child(10) { left: 25%; width: 8px; height: 8px; animation-duration: 18s; animation-delay: 6s; }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh); opacity: 0.8; }
+            100% { transform: translateY(100vh); opacity: 0.3; }
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 90%;
+            /* Festive Red Border Top */
+            border-top: 10px solid #e74c3c;
+            position: relative;
+            z-index: 10;
+        }
+
+        .face-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #1a472a;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .big-number {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .subtext {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .barber-button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .barber-button:hover {
+            background-color: #34495e;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+        }
+        
+        .footer a:hover {
+            border-bottom-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snow-container">
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+    </div>
+
+    <div class="container">
+        <img src="misterhaircut.jpg" alt="Friend's Face" class="face-image">
+    
+        <h1>How many haircuts until Christmas?</h1>
+        
+        
+        
+        <a href="https://dub.sh/86jpNQy" class="barber-button" target="_blank">Find out now</a>
+    </div>
+
+    <div class="footer">
+        <a href="https://idea2prototype.com">a nonsense idea from idea2prototype.com</a>
+    </div>
+
+</body>
+</html>
